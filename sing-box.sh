@@ -297,18 +297,6 @@ check_chatgpt() {
   fi
 }
 
-# 脚本当天及累计运行次数统计
-statistics_of_run-times() {
-  local UPDATE_OR_GET=$1
-  local SCRIPT=$2
-  if grep -q 'update' <<< "$UPDATE_OR_GET"; then
-    { wget --no-check-certificate -qO- --timeout=3 "https://stat.cloudflare.now.cc/api/updateStats?script=${SCRIPT}" > $TEMP_DIR/statistics 2>/dev/null || true; }&
-  elif grep -q 'get' <<< "$UPDATE_OR_GET"; then
-    [ -s $TEMP_DIR/statistics ] && [[ $(cat $TEMP_DIR/statistics) =~ \"todayCount\":([0-9]+),\"totalCount\":([0-9]+) ]] && local TODAY="${BASH_REMATCH[1]}" && local TOTAL="${BASH_REMATCH[2]}" && rm -f $TEMP_DIR/statistics
-    hint "\n*******************************************\n\n $(text 55) \n"
-  fi
-}
-
 # 选择中英语言
 select_language() {
   if [ -z "$L" ]; then
@@ -2872,9 +2860,6 @@ $(${WORK_DIR}/qrencode $SUBSCRIBE_ADDRESS/${UUID_CONFIRM}/auto2)
   # 生成并显示节点信息
   echo "$EXPORT_LIST_FILE" > ${WORK_DIR}/list
   cat ${WORK_DIR}/list
-
-  # 显示脚本使用情况数据
-  statistics_of_run-times get
 }
 
 # 创建快捷方式
@@ -3423,7 +3408,6 @@ menu() {
 }
 
 check_cdn
-statistics_of_run-times update sing-box.sh
 
 # 传参
 [[ "${*^^}" =~ '-E' ]] && L=E
