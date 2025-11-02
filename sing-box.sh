@@ -1223,7 +1223,7 @@ http {
     ~*clash                    /clash2;         # 匹配 Clash 客户端
     ~*Neko                     /neko;           # 匹配 Neko 客户端
     ~*ShadowRocket             /shadowrocket;   # 匹配 ShadowRocket  客户端
-    ~*SFM|SFI|SFA              /sing-box2;      # 匹配 Sing-box pc 和 phone 客户端
+    ~*SFM|SFI|SFA              /sing-box3;      # 匹配 Sing-box pc 和 phone 客户端
 #   ~*Chrome|Firefox|Mozilla   /;               # 添加更多的分流规则
   }"
 
@@ -2725,8 +2725,8 @@ anytls://${UUID[21]}@${SERVER_IP_1}:${PORT_ANYTLS}/?insecure=1#${NODE_NAME[21]}%
   echo $SING_BOX_JSON1 | sed 's# {[^}]\+"mixed"[^}]\+},##; s#, "auto_detect_interface": true##' | sed "s#\"<INBOUND_REPLACE>\",#$INBOUND_REPLACE#; s#\"<NODE_REPLACE>\"#${NODE_REPLACE%,}#g" | ${WORK_DIR}/jq > ${WORK_DIR}/subscribe/sing-box-phone
 
   # 模板2
-  local SING_BOX_JSON2=$(wget --no-check-certificate -qO- --tries=3 --timeout=2 ${GH_PROXY}${SUBSCRIBE_TEMPLATE}/sing-box2)
-  echo $SING_BOX_JSON2 | sed "s#\"<INBOUND_REPLACE>\",#$INBOUND_REPLACE#; s#\"<NODE_REPLACE>\"#${NODE_REPLACE%,}#g" | ${WORK_DIR}/jq > ${WORK_DIR}/subscribe/sing-box2
+  local SING_BOX_JSON2=$(wget --no-check-certificate -qO- --tries=3 --timeout=2 ${GH_PROXY}${SUBSCRIBE_TEMPLATE}/sing-box3)
+  echo $SING_BOX_JSON2 | sed "s#\"<INBOUND_REPLACE>\",#$INBOUND_REPLACE#; s#\"<NODE_REPLACE>\"#${NODE_REPLACE%,}#g" | ${WORK_DIR}/jq > ${WORK_DIR}/subscribe/sing-box3
 
   # 生成二维码 url 文件
   [ "$IS_SUB" = 'is_sub' ] && cat > ${WORK_DIR}/subscribe/qr << EOF
@@ -2829,7 +2829,7 @@ sing-box for cellphone $(text 80):
 $SUBSCRIBE_ADDRESS/${UUID_CONFIRM}/sing-box-phone
 
 SFI / SFA / SFM $(text 80):
-$SUBSCRIBE_ADDRESS/${UUID_CONFIRM}/sing-box2
+$SUBSCRIBE_ADDRESS/${UUID_CONFIRM}/sing-box3
 
 ShadowRocket $(text 80):
 $SUBSCRIBE_ADDRESS/${UUID_CONFIRM}/shadowrocket")
