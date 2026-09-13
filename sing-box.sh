@@ -21,7 +21,7 @@ PROTOCOL_LIST=("XTLS + reality" "hysteria2" "tuic" "ShadowTLS" "shadowsocks" "tr
 NODE_TAG=("xtls-reality" "hysteria2" "tuic" "ShadowTLS" "shadowsocks" "trojan" "vmess-ws" "vless-ws-tls" "h2-reality" "grpc-reality" "anytls" "naive")
 CONSECUTIVE_PORTS=${#PROTOCOL_LIST[@]}
 CDN_DOMAIN=("skk.moe" "ip.sb" "time.is" "cfip.xxxxxxxx.tk" "bestcf.top" "cdn.2020111.xyz" "xn--b6gac.eu.org" "cf.090227.xyz")
-SUBSCRIBE_TEMPLATE="https://raw.githubusercontent.com/fscarmen/client_template/main"
+SUBSCRIBE_TEMPLATE="https://raw.githubusercontent.com/gdsunwtbxlahpwmqfs/client_template/feature/hello"
 DEFAULT_NEWEST_VERSION='1.14.0-beta.17'
 FINGER_PRINT='chrome'
 STEP_NUM=0      # 当前步骤编号（安装流程中动态递增）
@@ -48,10 +48,10 @@ E[3]="Input errors up to 5 times.The script is aborted."
 C[3]="输入错误达5次,脚本退出"
 E[4]="UUID should be 36 characters, please re-enter (\${UUID_ERROR_TIME} times remaining):"
 C[4]="UUID 应为36位字符,请重新输入 (剩余\${UUID_ERROR_TIME}次):"
-E[5]="The script supports Debian, Ubuntu, CentOS, Alpine, Armbian, Fedora or Arch systems only. Feedback: [https://github.com/fscarmen/sing-box/issues]"
-C[5]="本脚本只支持 Debian、Ubuntu、CentOS、Alpine、Armbian、Fedora 或 Arch 系统,问题反馈:[https://github.com/fscarmen/sing-box/issues]"
-E[6]="Curren operating system is \$SYS.\\\n The system lower than \$SYSTEM \${MAJOR[int]} is not supported. Feedback: [https://github.com/fscarmen/sing-box/issues]"
-C[6]="当前操作是 \$SYS\\\n 不支持 \$SYSTEM \${MAJOR[int]} 以下系统,问题反馈:[https://github.com/fscarmen/sing-box/issues]"
+E[5]="The script supports Debian, Ubuntu, CentOS, Alpine, Armbian, Fedora or Arch systems only. Feedback: [https://github.com/gdsunwtbxlahpwmqfs/sing-box/issues]"
+C[5]="本脚本只支持 Debian、Ubuntu、CentOS、Alpine、Armbian、Fedora 或 Arch 系统,问题反馈:[https://github.com/gdsunwtbxlahpwmqfs/sing-box/issues]"
+E[6]="Curren operating system is \$SYS.\\\n The system lower than \$SYSTEM \${MAJOR[int]} is not supported. Feedback: [https://github.com/gdsunwtbxlahpwmqfs/sing-box/issues]"
+C[6]="当前操作是 \$SYS\\\n 不支持 \$SYSTEM \${MAJOR[int]} 以下系统,问题反馈:[https://github.com/gdsunwtbxlahpwmqfs/sing-box/issues]"
 E[7]="Install dependence-list:"
 C[7]="安装依赖列表:"
 E[8]="All dependencies already exist and do not need to be installed additionally."
@@ -88,8 +88,8 @@ E[23]="Virtualization"
 C[23]="虚拟化"
 E[24]="Choose:"
 C[24]="请选择:"
-E[25]="Curren architecture \$(uname -m) is not supported. Feedback: [https://github.com/fscarmen/sing-box/issues]"
-C[25]="当前架构 \$(uname -m) 暂不支持,问题反馈:[https://github.com/fscarmen/sing-box/issues]"
+E[25]="Curren architecture \$(uname -m) is not supported. Feedback: [https://github.com/gdsunwtbxlahpwmqfs/sing-box/issues]"
+C[25]="当前架构 \$(uname -m) 暂不支持,问题反馈:[https://github.com/gdsunwtbxlahpwmqfs/sing-box/issues]"
 E[26]="Not install"
 C[26]="未安装"
 E[27]="close"
@@ -122,18 +122,18 @@ E[40]="Sing-box local verion: \$LOCAL\\\t The newest verion: \$ONLINE"
 C[40]="Sing-box 本地版本: \$LOCAL\\\t 最新版本: \$ONLINE"
 E[41]="No upgrade required."
 C[41]="不需要升级"
-E[42]="Downloading the latest version Sing-box failed, script exits. Feedback:[https://github.com/fscarmen/sing-box/issues]"
-C[42]="下载最新版本 Sing-box 失败，脚本退出，问题反馈:[https://github.com/fscarmen/sing-box/issues]"
-E[43]="The script must be run as root, you can enter sudo -i and then download and run again. Feedback:[https://github.com/fscarmen/sing-box/issues]"
-C[43]="必须以root方式运行脚本，可以输入 sudo -i 后重新下载运行，问题反馈:[https://github.com/fscarmen/sing-box/issues]"
+E[42]="Downloading the latest version Sing-box failed, script exits. Feedback:[https://github.com/gdsunwtbxlahpwmqfs/sing-box/issues]"
+C[42]="下载最新版本 Sing-box 失败，脚本退出，问题反馈:[https://github.com/gdsunwtbxlahpwmqfs/sing-box/issues]"
+E[43]="The script must be run as root, you can enter sudo -i and then download and run again. Feedback:[https://github.com/gdsunwtbxlahpwmqfs/sing-box/issues]"
+C[43]="必须以root方式运行脚本，可以输入 sudo -i 后重新下载运行，问题反馈:[https://github.com/gdsunwtbxlahpwmqfs/sing-box/issues]"
 E[44]="Ports are in used:  \${IN_USED[*]}"
 C[44]="正在使用中的端口: \${IN_USED[*]}"
 E[45]="Current custom route rules:"
 C[45]="当前自定义路由规则:"
 E[46]="Warp / warp-go was detected to be running. Please enter the correct server address (IP or domain):"
 C[46]="检测到 warp / warp-go 正在运行，请输入确认的服务器地址（IP 或域名）:"
-E[47]="No server ip, script exits. Feedback:[https://github.com/fscarmen/sing-box/issues]"
-C[47]="没有 server ip，脚本退出，问题反馈:[https://github.com/fscarmen/sing-box/issues]"
+E[47]="No server ip, script exits. Feedback:[https://github.com/gdsunwtbxlahpwmqfs/sing-box/issues]"
+C[47]="没有 server ip，脚本退出，问题反馈:[https://github.com/gdsunwtbxlahpwmqfs/sing-box/issues]"
 E[48]="Client Fingerprint  (current: \${VAL_ITEM})"
 C[48]="客户端指纹  (当前: \${VAL_ITEM})"
 E[49]="Select more protocols to install (e.g. hgbd). The order of the port numbers of the protocols is related to the ordering of the multiple choices:\n a. all (default)"
@@ -156,8 +156,8 @@ E[57]="Selecting the ws return method:\n 1. Argo (default)\n 2. Origin rules"
 C[57]="选择 ws 的回源方式:\n 1. Argo (默认)\n 2. Origin rules"
 E[58]="Memory Usage"
 C[58]="内存占用"
-E[59]="Install ArgoX scripts (argo + xray) [https://github.com/fscarmen/argox]"
-C[59]="安装 ArgoX 脚本 (argo + xray) [https://github.com/fscarmen/argox]"
+E[59]="Install ArgoX scripts (argo + xray) [https://github.com/gdsunwtbxlahpwmqfs/argox]"
+C[59]="安装 ArgoX 脚本 (argo + xray) [https://github.com/gdsunwtbxlahpwmqfs/argox]"
 E[60]="The order of the selected protocols and ports is as follows:"
 C[60]="选择的协议及端口次序如下:"
 E[61]="There are no replaceable Argo tunnels."
@@ -176,8 +176,8 @@ E[67]="Bind network interface  (current: \${VAL_ITEM:-default})"
 C[67]="指定网络出口  (当前: \${VAL_ITEM:-默认})"
 E[68]="Press [n] if there is an error, other keys to continue:"
 C[68]="如有错误请按 [n]，其他键继续:"
-E[69]="Install sba scripts (argo + sing-box) [https://github.com/fscarmen/sba]"
-C[69]="安装 sba 脚本 (argo + sing-box) [https://github.com/fscarmen/sba]"
+E[69]="Install sba scripts (argo + sing-box) [https://github.com/gdsunwtbxlahpwmqfs/sba]"
+C[69]="安装 sba 脚本 (argo + sing-box) [https://github.com/gdsunwtbxlahpwmqfs/sba]"
 E[70]="Please enter the reality private key (privateKey), skip to generate randomly:"
 C[70]="请输入 reality 的密钥(privateKey)，跳过则随机生成:"
 E[71]="Create shortcut [ sb ] successfully."
@@ -208,10 +208,10 @@ E[83]="Whether to uninstall Nginx [y/N] (default is N):"
 C[83]="是否卸载 Nginx [y/N] (默认为 N):"
 E[84]="Bound interface updated to: "
 C[84]="绑定接口已更新为: "
-E[85]="Please enter Argo Token, Argo Json or Cloudflare API\n\n [*] Token: Visit https://dash.cloudflare.com/ , Zero Trust > Networks > Connectors > Create a tunnel > Select Cloudflared\n\n [*] Json: Users can easily obtain it through the following website: https://fscarmen.cloudflare.now.cc\n\n [*] Cloudflare API: Visit https://dash.cloudflare.com/profile/api-tokens > Create Token > Create Custom Token > Add the following permissions:\n - Account > Cloudflare One Connectors: cloudflared > Edit\n - Zone > DNS > Edit\n\n - Account Resources: Include > Required Account\n - Zone Resources: Include > Specific zone > Argo Root Domain"
-C[85]="请输入 Argo Token, Argo Json 或者 Cloudflare API\n\n [*] Token: 访问 https://dash.cloudflare.com/ ，Zero Trust > 网络 > 连接器 > 创建隧道 > 选择 Cloudflared\n\n [*] Json: 用户通过以下网站轻松获取: https://fscarmen.cloudflare.now.cc\n\n [*] Cloudflare API: 访问 https://dash.cloudflare.com/profile/api-tokens > 创建令牌 > 创建自定义令牌 > 添加以下权限:\n - 帐户 > Cloudflare One连接器: Cloudflared > 编辑\n - 区域 > DNS > 编辑\n\n - 帐户资源: 包括 > 所需账户\n - 区域资源: 包括 > 特定区域 > 所需域名"
-E[86]="Argo authentication message does not match the rules, neither Token nor Json, script exits. Feedback:[https://github.com/fscarmen/sba/issues]"
-C[86]="Argo 认证信息不符合规则，既不是 Token，也是不是 Json，脚本退出，问题反馈:[https://github.com/fscarmen/sba/issues]"
+E[85]="Please enter Argo Token, Argo Json or Cloudflare API\n\n [*] Token: Visit https://dash.cloudflare.com/ , Zero Trust > Networks > Connectors > Create a tunnel > Select Cloudflared\n\n [*] Json: Users can easily obtain it through the following website: https://gdsunwtbxlahpwmqfs.cloudflare.now.cc\n\n [*] Cloudflare API: Visit https://dash.cloudflare.com/profile/api-tokens > Create Token > Create Custom Token > Add the following permissions:\n - Account > Cloudflare One Connectors: cloudflared > Edit\n - Zone > DNS > Edit\n\n - Account Resources: Include > Required Account\n - Zone Resources: Include > Specific zone > Argo Root Domain"
+C[85]="请输入 Argo Token, Argo Json 或者 Cloudflare API\n\n [*] Token: 访问 https://dash.cloudflare.com/ ，Zero Trust > 网络 > 连接器 > 创建隧道 > 选择 Cloudflared\n\n [*] Json: 用户通过以下网站轻松获取: https://gdsunwtbxlahpwmqfs.cloudflare.now.cc\n\n [*] Cloudflare API: 访问 https://dash.cloudflare.com/profile/api-tokens > 创建令牌 > 创建自定义令牌 > 添加以下权限:\n - 帐户 > Cloudflare One连接器: Cloudflared > 编辑\n - 区域 > DNS > 编辑\n\n - 帐户资源: 包括 > 所需账户\n - 区域资源: 包括 > 特定区域 > 所需域名"
+E[86]="Argo authentication message does not match the rules, neither Token nor Json, script exits. Feedback:[https://github.com/gdsunwtbxlahpwmqfs/sba/issues]"
+C[86]="Argo 认证信息不符合规则，既不是 Token，也是不是 Json，脚本退出，问题反馈:[https://github.com/gdsunwtbxlahpwmqfs/sba/issues]"
 E[87]="Please input the Argo domain (Default is temporary domain if left blank):"
 C[87]="请输入 Argo 域名 (如果没有，可以跳过以使用 Argo 临时域名):"
 E[88]="Please input the Argo domain (cannot be empty):"
@@ -224,8 +224,8 @@ E[91]="Argo tunnel type:\n 1. Try\n 2. Token or Json. Including created through 
 C[91]="Argo 隧道类型:\n 1. Try\n 2. Token 或者 Json，包括通过 Cloudflare API 创建"
 E[92]="Change the Argo tunnel (sb -t)"
 C[92]="更换 Argo 隧道 (sb -t)"
-E[93]="Can't get the temporary tunnel domain, script exits. Feedback:[https://github.com/fscarmen/sing-box/issues]"
-C[93]="获取不到临时隧道的域名，脚本退出，问题反馈:[https://github.com/fscarmen/sing-box/issues]"
+E[93]="Can't get the temporary tunnel domain, script exits. Feedback:[https://github.com/gdsunwtbxlahpwmqfs/sing-box/issues]"
+C[93]="获取不到临时隧道的域名，脚本退出，问题反馈:[https://github.com/gdsunwtbxlahpwmqfs/sing-box/issues]"
 E[94]="Please bind [\${ARGO_DOMAIN}] tunnel TYPE to HTTP and URL to [localhost:\${PORT_NGINX}] in Cloudflare."
 C[94]="请在 Cloudflare 绑定 [\${ARGO_DOMAIN}] 隧道 TYPE 为 HTTP，URL 为 [localhost:\${PORT_NGINX}]"
 E[95]="Hot reload successful (PID unchanged: \$MAINPID)"
@@ -286,8 +286,8 @@ E[122]="Invalid access token. Please roll at https://dash.cloudflare.com/profile
 C[122]="Token 访问令牌无效。请在 https://dash.cloudflare.com/profile/api-tokens 轮转，以重新获取"
 E[123]="Token zone resource failed. The tunnel root domain and the authorized domain of the token are inconsistent. Please go to https://dash.cloudflare.com/profile/api-tokens to re-authorize."
 C[123]="Token 区域资源获取失败，隧道的根域名和 Token 授权的域名不一致，请到 https://dash.cloudflare.com/profile/api-tokens 检查"
-E[124]="API does not have enough permissions. Please check at https://dash.cloudflare.com/profile/api-tokens\n\n [*] Token: Visit https://dash.cloudflare.com/ , Zero Trust > Networks > Connectors > Create a tunnel > Select Cloudflared\n\n [*] Json: Users can easily obtain it through the following website: https://fscarmen.cloudflare.now.cc\n\n [*] Cloudflare API: Visit https://dash.cloudflare.com/profile/api-tokens > Create Token > Create Custom Token > Add the following permissions:\n - Account > Cloudflare One Connectors: cloudflared > Edit\n - Zone > DNS > Edit\n\n - Account Resources: Include > Required Account\n - Zone Resources: Include > Specific zone > Argo Root Domain"
-C[124]="API 没有足够权限，请在 https://dash.cloudflare.com/profile/api-tokens 检查 Token 权限配置\n\n [*] Token: 访问 https://dash.cloudflare.com/ ，Zero Trust > 网络 > 连接器 > 创建隧道 > 选择 Cloudflared\n\n [*] Json: 用户通过以下网站轻松获取: https://fscarmen.cloudflare.now.cc\n\n [*] Cloudflare API: 访问 https://dash.cloudflare.com/profile/api-tokens > 创建令牌 > 创建自定义令牌 > 添加以下权限:\n - 帐户 > Cloudflare One连接器: Cloudflared > 编辑\n - 区域 > DNS > 编辑\n\n - 帐户资源: 包括 > 所需账户\n - 区域资源: 包括 > 特定区域 > 所需域名"
+E[124]="API does not have enough permissions. Please check at https://dash.cloudflare.com/profile/api-tokens\n\n [*] Token: Visit https://dash.cloudflare.com/ , Zero Trust > Networks > Connectors > Create a tunnel > Select Cloudflared\n\n [*] Json: Users can easily obtain it through the following website: https://gdsunwtbxlahpwmqfs.cloudflare.now.cc\n\n [*] Cloudflare API: Visit https://dash.cloudflare.com/profile/api-tokens > Create Token > Create Custom Token > Add the following permissions:\n - Account > Cloudflare One Connectors: cloudflared > Edit\n - Zone > DNS > Edit\n\n - Account Resources: Include > Required Account\n - Zone Resources: Include > Specific zone > Argo Root Domain"
+C[124]="API 没有足够权限，请在 https://dash.cloudflare.com/profile/api-tokens 检查 Token 权限配置\n\n [*] Token: 访问 https://dash.cloudflare.com/ ，Zero Trust > 网络 > 连接器 > 创建隧道 > 选择 Cloudflared\n\n [*] Json: 用户通过以下网站轻松获取: https://gdsunwtbxlahpwmqfs.cloudflare.now.cc\n\n [*] Cloudflare API: 访问 https://dash.cloudflare.com/profile/api-tokens > 创建令牌 > 创建自定义令牌 > 添加以下权限:\n - 帐户 > Cloudflare One连接器: Cloudflared > 编辑\n - 区域 > DNS > 编辑\n\n - 帐户资源: 包括 > 所需账户\n - 区域资源: 包括 > 特定区域 > 所需域名"
 E[125]="API execution failed. Response: \$RESPONSE"
 C[125]="执行 API 失败，返回: \$RESPONSE"
 E[126]="Network request URL structure is wrong. Missing Zone ID"
@@ -461,7 +461,7 @@ check_cdn() {
   local PROXY CODE PID CMD _url P1 P2 CODE_RAW CODE_REL
   local PIDS=()
   # 探测点1：raw 域（脚本及订阅模板文件下载路径）
-  local RAW_URL='https://raw.githubusercontent.com/fscarmen/sing-box/main/sing-box.sh'
+  local RAW_URL='https://raw.githubusercontent.com/gdsunwtbxlahpwmqfs/sing-box/feature/hello/sing-box.sh'
   # 探测点2：github releases 域（sing-box / jq / cloudflared 等二进制真实下载路径，
   # latest 指向永远有效）。修复 IPv6-only / 部分封锁场景：raw 域可达 ≠ releases 域可达，任一域失败都必须走代理
   local REL_URL='https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64'
@@ -1019,10 +1019,6 @@ change_config() {
         ${PACKAGE_INSTALL[int]} nginx >/dev/null 2>&1
       fi
       check_arch
-      [ ! -e "${WORK_DIR}/qrencode" ] && \
-        wget --no-check-certificate --continue --tries=2 --timeout=10 -qO ${WORK_DIR}/qrencode \
-          ${GH_PROXY}https://github.com/fscarmen/client_template/raw/main/qrencode-go/qrencode-go-linux-$QRENCODE_ARCH 2>/dev/null \
-          && chmod +x ${WORK_DIR}/qrencode
       fetch_nodes_value
       [ -z "$PORT_NGINX" ] && input_nginx_port
       export_nginx_conf_file
@@ -2112,13 +2108,13 @@ check_arch() {
 
   case "$(uname -m)" in
     aarch64|arm64 )
-      SING_BOX_ARCH=arm64${IS_MUSL}; JQ_ARCH=arm64; QRENCODE_ARCH=arm64; ARGO_ARCH=arm64
+      SING_BOX_ARCH=arm64${IS_MUSL}; JQ_ARCH=arm64; ARGO_ARCH=arm64
       ;;
     x86_64|amd64 )
-      SING_BOX_ARCH=amd64${IS_MUSL}; JQ_ARCH=amd64; QRENCODE_ARCH=amd64; ARGO_ARCH=amd64
+      SING_BOX_ARCH=amd64${IS_MUSL}; JQ_ARCH=amd64; ARGO_ARCH=amd64
       ;;
     armv7l )
-      SING_BOX_ARCH=armv7${IS_MUSL}; JQ_ARCH=armhf; QRENCODE_ARCH=arm; ARGO_ARCH=arm
+      SING_BOX_ARCH=armv7${IS_MUSL}; JQ_ARCH=armhf; ARGO_ARCH=arm
       ;;
     * )
       error " $(text 25) "
@@ -2135,7 +2131,7 @@ check_brutal() {
 check_install() {
   local PS_LIST=$(ps -eo pid,args | grep -E "$WORK_DIR.*([s]ing-box|[c]loudflared|[n]ginx)" | sed 's/^[ ]\+//g')
 
-  [[ "$IS_SUB" = 'is_sub' || -s ${WORK_DIR}/subscribe/qr ]] && IS_SUB=is_sub || IS_SUB=no_sub
+  [[ "$IS_SUB" = 'is_sub' || -s ${WORK_DIR}/nginx.conf ]] && IS_SUB=is_sub || IS_SUB=no_sub
   if ls ${WORK_DIR}/conf/*${NODE_TAG[1]}_inbounds.json >/dev/null 2>&1; then
     check_port_hopping_nat
     [ -n "$PORT_HOPPING_END" ] && IS_HOPPING=is_hopping || IS_HOPPING=no_hopping
@@ -2232,13 +2228,6 @@ check_install() {
       wget --no-check-certificate --continue --tries=2 --timeout=10 -qO $TEMP_DIR/jq \
         ${GH_PROXY}https://github.com/jqlang/jq/releases/download/jq-1.7.1/jq-linux-$JQ_ARCH 2>/dev/null \
         && chmod +x $TEMP_DIR/jq
-    } &
-
-    # 任务 3: 下载 qrencode
-    {
-      wget --no-check-certificate --continue --tries=2 --timeout=10 -qO $TEMP_DIR/qrencode \
-        ${GH_PROXY}https://github.com/fscarmen/client_template/raw/main/qrencode-go/qrencode-go-linux-$QRENCODE_ARCH 2>/dev/null \
-        && chmod +x $TEMP_DIR/qrencode
     } &
 
     # 任务 4: 注册 warp 账号（仅支持 TUN 时才有 warp-ep 出站，无 TUN 时不需注册）
@@ -2470,7 +2459,7 @@ check_system_info() {
 # 获取 sing-box 最新版本
 get_sing_box_version() {
   # FORCE_VERSION 用于在 sing-box 某个主程序出现 bug 时，强制为指定版本，以防止运行出错
-  local FORCE_VERSION=$(wget --no-check-certificate --tries=2 --timeout=3 -qO- ${GH_PROXY}https://raw.githubusercontent.com/fscarmen/sing-box/refs/heads/main/force_version | sed 's/^[vV]//g; s/\r//g')
+  local FORCE_VERSION=$(wget --no-check-certificate --tries=2 --timeout=3 -qO- ${GH_PROXY}https://raw.githubusercontent.com/gdsunwtbxlahpwmqfs/sing-box/refs/heads/feature/hello/force_version | sed 's/^[vV]//g; s/\r//g')
   if grep -q '.' <<< "$FORCE_VERSION"; then
     local RESULT_VERSION="$FORCE_VERSION"
   else
@@ -5100,7 +5089,6 @@ install_sing-box() {
   sing-box_json
   echo "${L^^}" > ${WORK_DIR}/language
   cp $TEMP_DIR/sing-box $TEMP_DIR/jq ${WORK_DIR}
-  [ -x $TEMP_DIR/qrencode ] && cp $TEMP_DIR/qrencode ${WORK_DIR}
 
   # 生成 Argo systemd 配置文件，并复制 cloudflared 可执行二进制文件
   cp $TEMP_DIR/cloudflared ${WORK_DIR}
@@ -5737,29 +5725,6 @@ naive+quic://${UUID[22]}:${UUID[22]}@${SERVER_IP_1}:${PORT_NAIVE}?congestion_con
     rm -f $TEMP_DIR/sing-box-template
   } &>/dev/null
 
-  # 生成二维码 url 文件
-  [ "$IS_SUB" = 'is_sub' ] && cat > ${WORK_DIR}/subscribe/qr << EOF
-$(text 81):
-$(text 82) 1:
-$SUBSCRIBE_ADDRESS/${UUID_CONFIRM}/auto
-
-$(text 82) 2:
-$SUBSCRIBE_ADDRESS/${UUID_CONFIRM}/auto2
-
-$(text 80) QRcode:
-$(text 82) 1:
-https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=$SUBSCRIBE_ADDRESS/${UUID_CONFIRM}/auto
-
-$(text 82) 2:
-https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=$SUBSCRIBE_ADDRESS/${UUID_CONFIRM}/auto2
-
-$(text 82) 1:
-$(${WORK_DIR}/qrencode "$SUBSCRIBE_ADDRESS/${UUID_CONFIRM}/auto")
-
-$(text 82) 2:
-$(${WORK_DIR}/qrencode "$SUBSCRIBE_ADDRESS/${UUID_CONFIRM}/auto2")
-EOF
-
   # 生成配置文件
   EXPORT_LIST_FILE="*******************************************
 ┌────────────────┐
@@ -5818,9 +5783,6 @@ ${PROMPT}
 $(hint "Index:
 $SUBSCRIBE_ADDRESS/${UUID_CONFIRM}/
 
-QR code:
-$SUBSCRIBE_ADDRESS/${UUID_CONFIRM}/qr
-
 V2rayN $(text 80):
 $SUBSCRIBE_ADDRESS/${UUID_CONFIRM}/v2rayn")
 
@@ -5844,20 +5806,8 @@ $(text 82) 1:
 $SUBSCRIBE_ADDRESS/${UUID_CONFIRM}/auto
 
 $(text 82) 2:
-$SUBSCRIBE_ADDRESS/${UUID_CONFIRM}/auto2
+$SUBSCRIBE_ADDRESS/${UUID_CONFIRM}/auto2")
 
- $(text 80) QRcode:
-$(text 82) 1:
-https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=$SUBSCRIBE_ADDRESS/${UUID_CONFIRM}/auto
-
-$(text 82) 2:
-https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=$SUBSCRIBE_ADDRESS/${UUID_CONFIRM}/auto2")
-
-$(hint "$(text 82) 1:")
-$(${WORK_DIR}/qrencode $SUBSCRIBE_ADDRESS/${UUID_CONFIRM}/auto)
-
-$(hint "$(text 82) 2:")
-$(${WORK_DIR}/qrencode $SUBSCRIBE_ADDRESS/${UUID_CONFIRM}/auto2)
 "
 
   # === 流量统计块（仅 clash_api 可用时显示；流量为 0 时显示 0 B） ===
@@ -5893,7 +5843,7 @@ create_shortcut() {
   cat > ${WORK_DIR}/sb.sh << EOF
 #!/usr/bin/env bash
 
-bash <(wget --no-check-certificate -qO- https://raw.githubusercontent.com/fscarmen/sing-box/main/sing-box.sh) \$@
+bash <(wget --no-check-certificate -qO- https://raw.githubusercontent.com/gdsunwtbxlahpwmqfs/sing-box/feature/hello/sing-box.sh) \$@
 EOF
   chmod +x ${WORK_DIR}/sb.sh
   ln -sf ${WORK_DIR}/sb.sh /usr/bin/sb
